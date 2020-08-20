@@ -16,8 +16,21 @@ const books = [
 let checker = books => books.every(rented => [rented] > "0");
 console.log(checker(books));
 
-//   Est-ce que tous les livres ont été au moins empruntés une fois ?
-// Quel est livre le plus emprunté ?
+console.log(Math.max.apply(Math, books.map(function(o) {return o.rented;})));
+
+let max_value = 0;
+let max_name = "";
+books.forEach(function(book){ 
+    if(book.rented > max_value){
+        max_value = book.rented;
+        max_name = book.title;
+    }
+});
+console.log(max_name);
+
+
+
+
 // Quel est le livre le moins emprunté ?
 // Trouve le livre avec l'ID: 873495 ;
 // Supprime le livre avec l'ID: 133712 ;
