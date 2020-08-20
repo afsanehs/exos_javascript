@@ -34,6 +34,10 @@ today = entrepreneurs.map(x => ({'age en 2020' : 2020 - x.year}));
 
 console.log(today);
 
+alphabet = entrepreneurs.sort(function(a,b){
+  if (a.last < b.last) { return -1; }
+  if (a.last > b.last) { return 1; }
+  return 0;
+})
 
-
-//   Trie les entrepreneurs par ordre alphabétique du nom de famille.
+console.log(alphabet);
