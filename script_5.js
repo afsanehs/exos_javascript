@@ -28,10 +28,18 @@ books.forEach(function(book){
 });
 console.log(max_name);
 
+let min_value = 67;
+let min_name = "";
+books.forEach(function(book){ 
+    if(book.rented < min_value){
+        min_value = book.rented;
+        min_name = book.title;
+    }
+});
+console.log(min_name);
 
 
 
-// Quel est le livre le moins emprunté ?
 // Trouve le livre avec l'ID: 873495 ;
 // Supprime le livre avec l'ID: 133712 ;
 // Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).objec
