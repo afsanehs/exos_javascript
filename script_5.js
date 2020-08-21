@@ -49,9 +49,25 @@ books.forEach(function(book){
 });
 console.log(namesearch);
 
+function remover(IdNumber) {
+    for (let i=0; i < books.length; i++){
+        if (books[i].id === IdNumber){
+            removed = books.splice(i,1);
+        }
+        return removed;
+    }
+}
+
+let IdNumber = 133712;
+let BookToRemove = remover(IdNumber);
+console.log(`Le livre dont l'id est ${IdNumber} et intitulé ${BookToRemove[0].title} a été retiré de la BDD.`);
 
 
+// Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé)
 
-// Supprime le livre avec l'ID: 133712 ;
-// Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).objec
-
+ordered = books.sort(function(a,b){
+    if (a.title < b.title) { return -1; }
+    if (a.title > b.title) { return 1; }
+    return 0;
+})
+console.log(ordered);

@@ -39,5 +39,4 @@ alphabet = entrepreneurs.sort(function(a,b){
   if (a.last > b.last) { return 1; }
   return 0;
 })
-
 console.log(alphabet);
