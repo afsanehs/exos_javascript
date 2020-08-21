@@ -11,4 +11,5 @@ document.write("<br/>");
 }
 
 
+////////////////////////////////////////////
 console.log(`voilà ce que tu as tapé : ${n}`);

@@ -18,6 +18,7 @@ console.log(checker(books));
 
 console.log(Math.max.apply(Math, books.map(function(o) {return o.rented;})));
 
+
 let max_value = 0;
 let max_name = "";
 books.forEach(function(book){ 
@@ -27,6 +28,7 @@ books.forEach(function(book){
     }
 });
 console.log(max_name);
+
 
 let min_value = 67;
 let min_name = "";
@@ -38,9 +40,18 @@ books.forEach(function(book){
 });
 console.log(min_name);
 
+let goal = 873495
+let namesearch = "";
+books.forEach(function(book){ 
+    if(book.id == goal){
+        namesearch = book.title;
+    }
+});
+console.log(namesearch);
 
 
-// Trouve le livre avec l'ID: 873495 ;
+
+
 // Supprime le livre avec l'ID: 133712 ;
 // Trie les livres par ordre alphabétique (sans celui avec l'ID 133712 car il est supprimé).objec
 
